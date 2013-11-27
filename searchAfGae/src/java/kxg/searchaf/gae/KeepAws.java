@@ -28,7 +28,7 @@ public class KeepAws {
 		try {
 
 			URL url = new URL(
-					"http://searchaf.elasticbeanstalk.com/searchAfTask");
+					"http://searchaf.elasticbeanstalk.com/timetask/createtask");
 			// URL url = new URL(
 			// "http://default-environment-6mupqptgpr.elasticbeanstalk.com");
 			HttpURLConnection urlConnection = (HttpURLConnection) url
