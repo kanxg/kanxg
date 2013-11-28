@@ -20,8 +20,8 @@ public class AmazonPageMongoDao {
 	private DBCollection coll;
 
 	public AmazonPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("amazonlist");
 	}
 

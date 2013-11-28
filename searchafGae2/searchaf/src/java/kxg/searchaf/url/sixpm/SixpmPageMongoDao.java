@@ -20,8 +20,8 @@ public class SixpmPageMongoDao {
 	private DBCollection coll;
 
 	public SixpmPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("sixpmlist");
 	}
 

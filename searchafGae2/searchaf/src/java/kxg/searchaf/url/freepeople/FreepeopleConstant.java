@@ -5,7 +5,7 @@ public class FreepeopleConstant {
 
 	// public static float shipfee = 0;
 
-	public static long sleeptime = 6*60L; // minutes
+	public static long sleeptime = 60L; // minutes
 
 	public static int tryerLicenseDay = 30;
 

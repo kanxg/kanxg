@@ -20,8 +20,8 @@ public class NordstromPageMongoDao {
 	private DBCollection coll;
 
 	public NordstromPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("nordstromlist");
 	}
 

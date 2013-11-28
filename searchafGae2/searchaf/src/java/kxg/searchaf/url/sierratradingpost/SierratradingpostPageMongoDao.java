@@ -20,8 +20,8 @@ public class SierratradingpostPageMongoDao {
 	private DBCollection coll;
 
 	public SierratradingpostPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("sierratradingpostlist");
 	}
 

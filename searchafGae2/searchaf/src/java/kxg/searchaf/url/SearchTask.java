@@ -83,9 +83,9 @@ public class SearchTask {// extends TimerTask {
 	public SearchTask() {
 		amazon = new SearchAmazon();
 
-//		af = new SearchAf();
-
-		// hollisterco = new SearchHollisterco();
+		af = new SearchAf();
+		 hollisterco = new SearchHollisterco();
+		 
 		// drugstore = new SearchDrugstore();
 		// Ralphlauren = new SearchRalphlauren();
 		// Tommy = new SearchTommy();

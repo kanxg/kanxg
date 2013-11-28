@@ -22,9 +22,9 @@ public class AfConstant {
 
 	public static String addtoCartUrl = "http://www.abercrombie.com/webapp/wcs/stores/servlet/OrderItemAdd?storeId=10051&catalogId=10901&langId=-1&URL=OrderCalculate%3FcalculationUsageId%3D-1%26URL%3DShopRestrict&quantity=1";
 
-	public static long sleeptime = 10L; // minutes
+	public static long sleeptime = 30L; // minutes
 
 	public static String checkingURLhost = "/shop/us/";
 
-	public static int tryerLicenseDay = 7;
+	public static int tryerLicenseDay = 300;
 }

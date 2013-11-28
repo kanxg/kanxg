@@ -20,8 +20,8 @@ public class MacysPageMongoDao {
 	private DBCollection coll;
 
 	public MacysPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("macyslist");
 	}
 

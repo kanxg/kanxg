@@ -9,6 +9,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import kxg.searchaf.url.af.AfMailList;
+import kxg.searchaf.url.af.AfMailListMongoDao;
+
 import com.mongodb.WriteResult;
 
 public class HollistercoMailListJSP {
@@ -132,23 +135,42 @@ public class HollistercoMailListJSP {
 	}
 
 	public static void main(String[] args) throws Exception {
-		HollistercoMailListJSP jsp = new HollistercoMailListJSP();
-		HollistercoMailList hollistercoMailList = jsp
-				.loadMail("xingang.af1@gmail.com");
-		System.out.println(hollistercoMailList);
-
-		if (hollistercoMailList != null) {
-			DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-			hollistercoMailList.valideTime = df.parse("2015-09-13");
-			hollistercoMailList.userType = "buyer";
-			HollistercoMailListMongoDao dao = new HollistercoMailListMongoDao();
-			dao.update(hollistercoMailList);
-		}
-		System.out.println(hollistercoMailList);
+//		HollistercoMailListJSP jsp = new HollistercoMailListJSP();
+//		HollistercoMailList hollistercoMailList = jsp
+//				.loadMail("xingang.af1@gmail.com");
+//		System.out.println(hollistercoMailList);
+//
+//		if (hollistercoMailList != null) {
+//			DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+//			hollistercoMailList.valideTime = df.parse("2015-09-13");
+//			hollistercoMailList.userType = "buyer";
+//			HollistercoMailListMongoDao dao = new HollistercoMailListMongoDao();
+//			dao.update(hollistercoMailList);
+//		}
+//		System.out.println(hollistercoMailList);
 
 		// for (int i = 0; i < hollistercoMailList.mencheckingCategory.size();
 		// i++) {
 		// System.out.println(hollistercoMailList.mencheckingCategory.get(i));
 		// }
+
+		HollistercoMailListMongoDao dao = new HollistercoMailListMongoDao();
+		List<HollistercoMailList> afmailist = HollistercoMailList.getinstance();
+		for (int i = 0; i < afmailist.size(); i++) {
+			HollistercoMailList afMailList = afmailist.get(i);
+			System.out.println(afMailList);
+
+			try {
+				DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+				Date quTime = df.parse("2014-12-12");
+
+				afMailList.valideTime = quTime;
+
+				dao.update(afMailList);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 }

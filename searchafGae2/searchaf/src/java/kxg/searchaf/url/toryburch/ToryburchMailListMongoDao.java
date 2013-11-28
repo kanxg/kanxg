@@ -20,16 +20,15 @@ public class ToryburchMailListMongoDao {
 	private DBCollection coll;
 
 	public ToryburchMailListMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("toryburchmaillist");
 	}
 
 	public ToryburchMailListMongoDao(boolean usingBackupDb)
 			throws UnknownHostException {
 		if (usingBackupDb) {
-			MongoBackupDao dao = new MongoBackupDao();
-			db = dao.getDao();
+ 			db = MongoBackupDao.getDao();
 			coll = db.getCollection("toryburchmaillist");
 		}
 	}

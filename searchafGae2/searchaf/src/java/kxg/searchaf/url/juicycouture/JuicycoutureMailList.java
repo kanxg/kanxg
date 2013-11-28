@@ -76,7 +76,7 @@ public class JuicycoutureMailList implements Comparable<Object> {
 
 	public int getSendingMailRetryTimes() {
 		if ("buyer".equalsIgnoreCase(this.userType))
-			return 3; // retry 3 times
+			return 1; // retry 3 times
 		return 1; // not try
 	}
 	

@@ -94,16 +94,16 @@
     <div class="row">
                 <div class="span4">
           <p><a class="btn" href="af/af"><img src="images/af.jpg"  width="200"  height="40"></a></p>
-           <p>收费 10RMB/月</p>
+             <p>收费 10RMB/月</p>
          </div>
         <div class="span4">
            <p><a class="btn" href="hco/hco"><img src="images/hco.jpg"  width="200"  height="40"></a></p>
-           <p>收费 5RMB/月</p>
+           <p>免费</p>
         </div>
         
        <div class="span4">
           <p><a class="btn" href="rl/searchmen"><img src="images/RL.jpg"  width="200"  height="40"></a></p>
-           <p>收费 10RMB/月</p>
+           <p>免费</p>
          </div>
        </div>  
          
@@ -111,15 +111,15 @@
        <div class="row">
           <div class="span4">
            <p><a class="btn" href="freepeople/searchfreepeoplewomen"><img src="images/freepeople.jpg"  width="200"  height="40"></a></p>
-           <p>收费 10RMB/月</p>
+           <p>免费</p>
         </div>
         <div class="span4">
           <p><a class="btn" href="toryburch/searchtoryburchwomen"><img src="images/toryburch.jpg"  width="200"  height="40"></a></p>
-           <p>收费 10RMB/月</p>
+          <p>免费</p>
          </div>
                  <div class="span4">
           <p><a class="btn" href="juicycouture/searchjuicycouturewomen"><img src="images/juicycouture.jpg"  width="200"  height="40"></a></p>
-           <p>收费 10RMB/月</p>
+           <p>免费</p>
          </div>
       </div>
  
@@ -127,15 +127,15 @@
   	 <div class="row">
         <div class="span4">
           <p><a class="btn" href="jcrew/searchmen"><img src="images/jcrew.jpg"  width="200"  height="40"></a></p>
-           <p>收费 10RMB/月</p>
+          <p>免费</p>
          </div>
         <div class="span4">
            <p><a class="btn" href="gymboree/searchgymboreeboy"><img src="images/gymboree.jpg"  width="200"  height="40"></a></p>
-           <p>收费 10RMB/月</p>
+           <p>免费</p>
         </div>
  		 <div class="span4">
           <p><a class="btn" href="tommy/searchmen"><img src="images/tommy.jpg"  width="200"  height="40"></a></p>
-           <p>收费 10RMB/月</p>
+       	 <p>免费</p>
          </div>
       </div>
       

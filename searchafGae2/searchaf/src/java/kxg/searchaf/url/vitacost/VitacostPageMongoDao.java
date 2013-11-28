@@ -20,8 +20,8 @@ public class VitacostPageMongoDao {
 	private DBCollection coll;
 
 	public VitacostPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("vitacostlist");
 	}
 

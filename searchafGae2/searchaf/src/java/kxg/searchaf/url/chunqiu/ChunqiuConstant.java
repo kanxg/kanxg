@@ -5,7 +5,7 @@ public class ChunqiuConstant {
 
 	// public static float shipfee = 0;
 
-	public static long sleeptime = 30L; // minutes
+	public static long sleeptime = 60L; // minutes
 
 	public static String[] checkingHangban = { "9C8921", "9C8960", "9C8922",
 			"9C8917" };

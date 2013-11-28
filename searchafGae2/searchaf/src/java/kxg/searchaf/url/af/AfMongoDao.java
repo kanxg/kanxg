@@ -17,8 +17,8 @@ public class AfMongoDao {
 	private DBCollection coll;
 
 	public AfMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("afproduct");
 	}
 

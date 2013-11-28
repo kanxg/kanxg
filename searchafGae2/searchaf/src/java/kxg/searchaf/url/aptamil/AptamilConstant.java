@@ -2,7 +2,7 @@ package kxg.searchaf.url.aptamil;
 
 public class AptamilConstant {
 
-	public static long sleeptime = 10L; // minutes
+	public static long sleeptime = 60L; // minutes
 
 	public static String[] CheckProduct = {
 			"Pre (300 g), 1 Stück",

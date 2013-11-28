@@ -12,11 +12,24 @@ import com.mongodb.DB;
 
 public class MongoDao {
 
-	private String mongohqURL = "mongodb://searchaf:searchaf@dharma.mongohq.com:10039/searchaf";
+	private static String mongohqURL = "mongodb://searchaf:searchaf@dharma.mongohq.com:10039/searchaf";
 
-	private String uriString = mongohqURL;
+	private static String uriString = mongohqURL;
 
-	public DB getDao() throws UnknownHostException {
+	private static DB db;
+	
+	public static DB getDao()  {
+		if(db==null){
+			try {
+				connect();
+			} catch (UnknownHostException e) {
+				e.printStackTrace();
+			}
+		}
+		return db;
+	}
+	
+	public static void connect() throws UnknownHostException {
 
 		// String uriString =
 		// "mongodb://searchaf:searchaf@ds051437.mongolab.com:51437/searchaf";
@@ -36,15 +49,14 @@ public class MongoDao {
 		// System.out.println(s);
 		// }
 
-		return db;
+		MongoDao.db=db;
 	}
 
 	public static void main(String[] args) throws Exception {
 
 		ProxyUtli.setProxy(true);
 
-		MongoDao dao = new MongoDao();
-		DB db=dao.getDao();
+ 		DB db=MongoDao.getDao();
 		DBCollection coll = db.getCollection("afmaillist");
 	}
 }

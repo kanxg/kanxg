@@ -20,8 +20,8 @@ public class SaksPageMongoDao {
 	private DBCollection coll;
 
 	public SaksPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("sakslist");
 	}
 

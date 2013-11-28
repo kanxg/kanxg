@@ -20,16 +20,15 @@ public class JuicycoutureMailListMongoDao {
 	private DBCollection coll;
 
 	public JuicycoutureMailListMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("juicycouturemaillist");
 	}
 
 	public JuicycoutureMailListMongoDao(boolean usingBackupDb)
 			throws UnknownHostException {
 		if (usingBackupDb) {
-			MongoBackupDao dao = new MongoBackupDao();
-			db = dao.getDao();
+ 			db = MongoBackupDao.getDao();
 			coll = db.getCollection("juicycouturemaillist");
 		}
 	}

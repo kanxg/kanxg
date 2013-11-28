@@ -20,16 +20,15 @@ public class RalphlaurenMailListMongoDao {
 	private DBCollection coll;
 
 	public RalphlaurenMailListMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("ralphlaurenmaillist");
 	}
 
 	public RalphlaurenMailListMongoDao(boolean usingBackupDb)
 			throws UnknownHostException {
 		if (usingBackupDb) {
-			MongoBackupDao dao = new MongoBackupDao();
-			db = dao.getDao();
+ 			db = MongoBackupDao.getDao();
 			coll = db.getCollection("ralphlaurenmaillist");
 		}
 	}

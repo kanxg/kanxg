@@ -11,11 +11,24 @@ import com.mongodb.DB;
 
 public class MongoBackupDao {
 
-	private String mongolabURL = "mongodb://searchaf:searchaf@ds051437.mongolab.com:51437/searchaf";
+	private static String mongolabURL = "mongodb://searchaf:searchaf@ds051437.mongolab.com:51437/searchaf";
 
-	private String uriString = mongolabURL;
+	private static String uriString = mongolabURL;
 
-	public DB getDao() throws UnknownHostException {
+	private static DB db;
+
+	public static DB getDao() {
+		if (db == null) {
+			try {
+				connect();
+			} catch (UnknownHostException e) {
+				e.printStackTrace();
+			}
+		}
+		return db;
+	}
+
+	public static void connect() throws UnknownHostException {
 
 		// String uriString =
 		// "mongodb://searchaf:searchaf@ds051437.mongolab.com:51437/searchaf";
@@ -35,15 +48,14 @@ public class MongoBackupDao {
 		// System.out.println(s);
 		// }
 
-		return db;
+		MongoBackupDao.db = db;
 	}
 
 	public static void main(String[] args) throws Exception {
 
 		ProxyUtli.setProxy(true);
 
-		MongoDao dao = new MongoDao();
-		dao.getDao();
+		MongoDao.getDao();
 	}
 
 }

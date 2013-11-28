@@ -126,44 +126,45 @@ public class AfMailListJSP {
 		return returnkey;
 	}
 
-	public static void main(String[] args) {
-		AfMailListJSP jsp = new AfMailListJSP();
-		AfMailList afMailList = jsp.loadMail("308003936@qq.com");
-		System.out.println(afMailList);
-		if (afMailList != null) {
+	public static void main(String[] args) throws UnknownHostException {
+//		AfMailListJSP jsp = new AfMailListJSP();
+//		AfMailList afMailList = jsp.loadMail("308003936@qq.com");
+//		System.out.println(afMailList);
+//		if (afMailList != null) {
+//
+//			try {
+//				DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+//				afMailList.valideTime = df.parse("2013-11-19");
+//				// afMailList.userType="buyer";
+//				AfMailListMongoDao dao = new AfMailListMongoDao();
+//				dao.update(afMailList);
+//
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//		}
 
-			try {
-				DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-				afMailList.valideTime = df.parse("2013-11-19");
-				// afMailList.userType="buyer";
-				AfMailListMongoDao dao = new AfMailListMongoDao();
-				dao.update(afMailList);
+		 AfMailListMongoDao dao = new AfMailListMongoDao();
+		 List<AfMailList> afmailist = AfMailList.getinstance();
+		 for (int i = 0; i < afmailist.size(); i++) {
+		 AfMailList afMailList = afmailist.get(i);
+		 System.out.println(afMailList);
+ 
 
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-
-		// List<AfMailList> afmailist = AfMailList.getinstance();
-		// for (int i = 0; i < afmailist.size(); i++) {
-		// AfMailList afMailList = afmailist.get(i);
-		// System.out.println(afMailList);
-		//
-		// Calendar rightNow = Calendar.getInstance();
-		// rightNow.setTime(afMailList.valideTime);
-		// rightNow.add(Calendar.DAY_OF_YEAR, 7);// 日期加7天
-		// afMailList.valideTime = rightNow.getTime();
-		//
-		// try {
-		// AfMailListMongoDao dao = new AfMailListMongoDao();
-		// dao.update(afMailList);
-		// } catch (UnknownHostException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
-		//
-		// // System.out.println(afMailList);
-		// }
+		 try {
+			 DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+				Date quTime = df.parse("2014-12-12");
+				
+			 afMailList.valideTime =quTime;
+			
+			 dao.update(afMailList);
+		 } catch (Exception e) {
+		 // TODO Auto-generated catch block
+		 e.printStackTrace();
+		 }
+		
+		 // System.out.println(afMailList);
+		 }
 
 		// for (int i = 0; i < afMailList.mencheckingCategory.size(); i++) {
 		// System.out.println(afMailList.mencheckingCategory.get(i));

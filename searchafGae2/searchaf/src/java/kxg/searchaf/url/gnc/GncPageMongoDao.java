@@ -20,8 +20,8 @@ public class GncPageMongoDao {
 	private DBCollection coll;
 
 	public GncPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("gnclist");
 	}
 

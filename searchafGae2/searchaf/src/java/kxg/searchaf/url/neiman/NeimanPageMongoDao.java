@@ -20,8 +20,8 @@ public class NeimanPageMongoDao {
 	private DBCollection coll;
 
 	public NeimanPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("neimanlist");
 	}
 

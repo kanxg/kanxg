@@ -20,8 +20,8 @@ public class DrugstorePageMongoDao {
 	private DBCollection coll;
 
 	public DrugstorePageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("drugstorelist");
 	}
 

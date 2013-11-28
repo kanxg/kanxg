@@ -17,8 +17,8 @@ public class HollistercoMongoDao {
 	private DBCollection coll;
 
 	public HollistercoMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("hollistercoproduct");
 	}
 

@@ -20,8 +20,8 @@ public class BeautyPageMongoDao {
 	private DBCollection coll;
 
 	public BeautyPageMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("beautylist");
 	}
 

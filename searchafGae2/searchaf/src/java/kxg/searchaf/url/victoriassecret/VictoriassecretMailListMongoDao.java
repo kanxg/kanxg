@@ -20,16 +20,15 @@ public class VictoriassecretMailListMongoDao {
 	private DBCollection coll;
 
 	public VictoriassecretMailListMongoDao() throws UnknownHostException {
-		MongoDao dao = new MongoDao();
-		db = dao.getDao();
+		
+		db = MongoDao.getDao();
 		coll = db.getCollection("victoriassecretmaillist");
 	}
 
 	public VictoriassecretMailListMongoDao(boolean usingBackupDb)
 			throws UnknownHostException {
 		if (usingBackupDb) {
-			MongoBackupDao dao = new MongoBackupDao();
-			db = dao.getDao();
+ 			db = MongoBackupDao.getDao();
 			coll = db.getCollection("victoriassecretmaillist");
 		}
 	}
