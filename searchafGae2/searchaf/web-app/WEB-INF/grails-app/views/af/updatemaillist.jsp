@@ -59,7 +59,7 @@
 	 		 	 womencheckingSecretSale=true; 		 
 	 		 }
 	 		 String mencheckingClearanceDiscount = request.getParameter("mencheckingClearanceDiscount");
-	 		 String womencheckingClearanceDiscount = request.getParameter("womencheckingClearanceDiscount");
+ 	 		 String womencheckingClearanceDiscount = request.getParameter("womencheckingClearanceDiscount");
 	 		 String mencheckingSaleDiscount = request.getParameter("mencheckingSaleDiscount");
 	 		 String womencheckingSaleDiscount = request.getParameter("womencheckingSaleDiscount");
 	 		 String[] mencheckingCategory = request.getParameterValues("mencheckingCategory");
@@ -427,7 +427,10 @@ $( document ).ready(function(){
 	 $("#mencheckingSale").attr("checked", <%=afMailList.mencheckingSale%>);
 	 $('#mencheckingSale').parent().bootstrapSwitch('setState', <%=afMailList.mencheckingSale%>);
       
-	  $('#mencheckingSaleDiscount').slider({
+	 $("#mencheckingClearanceDiscount").val("<%=afMailList.mencheckingClearanceDiscount*100%>");
+	 $("#mencheckingSaleDiscount").val("<%=afMailList.mencheckingSaleDiscount*100%>");
+	 
+	 $('#mencheckingSaleDiscount').slider({
 		     value:<%=afMailList.mencheckingSaleDiscount%>*100,
 	         formater: function(value) {
 	           return '折扣: '+value/100;
@@ -463,7 +466,9 @@ $( document ).ready(function(){
 	 $("#womencheckingSecretSale").attr("checked", <%=afMailList.womencheckingSecretSale%>);
 	 $("#womencheckingClearance").attr("checked", <%=afMailList.womencheckingClearance%>);
 	 $("#womencheckingSale").attr("checked", <%=afMailList.womencheckingSale%>);
-	 
+	 $("#womencheckingClearanceDiscount").val("<%=afMailList.womencheckingClearanceDiscount*100%>");
+	 $("#womencheckingSaleDiscount").val("<%=afMailList.womencheckingSaleDiscount*100%>");
+
 	 $('#womencheckingClearanceDiscount').slider({
 	     value:<%=afMailList.womencheckingClearanceDiscount%>*100,
          formater: function(value) {
