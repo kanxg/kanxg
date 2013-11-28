@@ -148,20 +148,20 @@ public class AfMailListJSP {
 		 List<AfMailList> afmailist = AfMailList.getinstance();
 		 for (int i = 0; i < afmailist.size(); i++) {
 		 AfMailList afMailList = afmailist.get(i);
-		 System.out.println(afMailList);
+		 System.out.print(afMailList.mailaddress+",");
  
 
-		 try {
-			 DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-				Date quTime = df.parse("2014-12-12");
-				
-			 afMailList.valideTime =quTime;
-			
-			 dao.update(afMailList);
-		 } catch (Exception e) {
-		 // TODO Auto-generated catch block
-		 e.printStackTrace();
-		 }
+//		 try {
+//			 DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+//				Date quTime = df.parse("2014-12-12");
+//				
+//			 afMailList.valideTime =quTime;
+//			
+//			 dao.update(afMailList);
+//		 } catch (Exception e) {
+//		 // TODO Auto-generated catch block
+//		 e.printStackTrace();
+//		 }
 		
 		 // System.out.println(afMailList);
 		 }

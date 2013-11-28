@@ -70,6 +70,7 @@ environments {
 }
 //add kanxg
 grails.gsp.enable.reload=true
+grails.jsp.enable.reload=true
 
 // log4j configuration
 log4j = {
